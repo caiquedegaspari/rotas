@@ -1,0 +1,23 @@
+<div style="display: flex;flex-direction: row;">
+    <div>
+        <div *ngIf="book$ | async as book">
+            <div>
+                <p>Book Title:{{book.title}}</p>
+                <p>Pages:{{book.page}}</p>
+            </div>
+            <div>
+                <button mat-raised-button color="primary" (click)="goAuthors()">
+                    <mat-icon>people_outline</mat-icon>
+                    Authors
+                </button>
+
+                <button mat-raised-button color="accent" (click)="remove()">
+                    <mat-icon>delete_outline</mat-icon>
+                    Remove
+                </button>
+            </div>
+        </div>
+       
+    </div>
+    <router-outlet></router-outlet>
+</div>

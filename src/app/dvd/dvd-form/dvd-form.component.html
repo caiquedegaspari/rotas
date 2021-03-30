@@ -1,0 +1,21 @@
+<div>
+    <form [formGroup]="formDvd" (ngSubmit)="onSubmit()">
+        <mat-form-field>
+            <input matInput placeholder="Title" formControlName="title">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Year" type="number" formControlName="year">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Genre" formControlName="genre">
+        </mat-form-field>
+        <div>
+            <button mat-button color="primary" type="submit">Save</button>
+        </div>
+    </form>
+    <div>
+        <button mat-button (click)="goBack()" color="primary">Go back</button>
+    </div>
+</div>
